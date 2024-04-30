@@ -1,0 +1,1 @@
+import{x as u,r as n}from"./index-dbaeffc6.js";const f=u("User",()=>{const o=n(""),s=n(""),r=n(!1);function t(e){o.value=e}function a(e){s.value=e}function c(e){r.value=e}return{username:o,changeUser:t,token:s,changeToken:a,isAdmin:r,changeAdmin:c}});export{f as u};
