@@ -1,0 +1,1 @@
+import{d as s,a2 as n,a3 as c,aq as r,al as p,a7 as l}from"./vue-CUuKurUo.js";const u=l("h1",null,"Redirecting...",-1),_=[u],f=s({__name:"redirect",setup(d){const a=r(),t=p(),e=a.params,o=e!=null&&e.path?decodeURIComponent(e.path):"";return o?t.replace(o):t.replace("/"),(i,h)=>(n(),c("div",null,_))}});export{f as default};

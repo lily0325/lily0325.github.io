@@ -1,0 +1,1 @@
+import{r,aG as n}from"./vue-CUuKurUo.js";const a={xl:1600,lg:1199,md:991,sm:767,xs:575};function m(){const s=r(n(a)),e=s.smaller("sm"),t=s.between("sm","md"),o=s.greater("md");return{breakpoints:s,isMobile:e,isPad:t,isDesktop:o}}export{m as u};

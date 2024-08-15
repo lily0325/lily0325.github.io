@@ -1,0 +1,1 @@
+window.__PRODUCTION__TTM__BI__CONF__={"VITE_GLOB_APP_TITLE":"TTM-BI"};Object.freeze(window.__PRODUCTION__TTM__BI__CONF__);Object.defineProperty(window, "__PRODUCTION__TTM__BI__CONF__", {configurable: false,writable: false,});
