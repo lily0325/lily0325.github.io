@@ -13,7 +13,9 @@ export default defineConfig({
     search: {
       provider: 'local'
     },
-
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/lily0325/lily0325.github.io' }
+    ],
     nav: [
       { text: '主页', link: '/' },
       { text: '文档', link: '/introduction' },
@@ -32,6 +34,7 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: '静态资源请求处理器', link: '/function/ResourceHttpRequestHandler' },
+          { text: '服务器部署前后端+SSL证书', link: '/function/deploy+ssl' },
           // { text: '功能使用', link: '/function' },
         ],
       },
