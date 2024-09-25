@@ -2,8 +2,8 @@
 layout: home
 
 hero:
-  name: Leet开发文档
-  text: 基于VitePress的开发文档
+  name: 个人开发学习资料库
+  text: 基于VitePress开发
   tagline: 
   actions:
     - theme: brand

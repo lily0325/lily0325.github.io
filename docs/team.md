@@ -16,7 +16,6 @@ const members = [
     title: '制作者',
     links: [
       { icon: 'github', link: 'https://github.com/lily0325' },
-      // { icon: 'gitee', link: 'https://gitee.com/lily0325' },
     ]
   },
   
