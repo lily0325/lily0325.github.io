@@ -28,37 +28,28 @@ export default defineConfig({
         link: '/introduction'
       },
       {
-        text: '前端',
+        text: '功能实现',
         collapsed: false,
         items: [
-          { text: '快速开始', link: '/gettingStarted' },
-          { text: '功能使用', link: '/function' },
+          { text: '静态资源请求处理器', link: '/function/ResourceHttpRequestHandler' },
+          // { text: '功能使用', link: '/function' },
         ],
       },
       {
-        text: '后端',
+        text: '踩坑记录',
         collapsed: false,
         items: [
-          { text: '快速开始', link: '/gettingStarted' },
-          { text: '功能使用', link: '/function' },
+          { text: '2024踩坑日志', link: '/mistake/2024' },
         ],
       },
       {
         text: '知识',
         collapsed: false,
         items: [
-          { text: 'WebSocket', link: '/doc/ws' },
-          { text: 'SSE', link: '/doc/sse' },
+          { text: 'WebSocket', link: '/knowledge/ws' },
+          { text: 'SSE', link: '/knowledge/sse' },
         ],
       },
-      {
-        text: '功能',
-        collapsed: false,
-        items: [
-          { text: '快速开始', link: '/gettingStarted' },
-          { text: '功能使用', link: '/function' },
-        ],
-      }
     ],
   },
 });
