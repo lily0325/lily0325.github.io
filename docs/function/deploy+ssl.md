@@ -49,7 +49,7 @@
 
 采用免费的SSL证书工具CertBot，证书到期后还能自动免费续期。
 
-[官网地址](https://tse3-mm.cn.bing.net/th/id/OIP-C.mWsgk-PLu3bdtdeihFrQMQHaCh?rs=1&pid=ImgDetMain)
+[官网地址](https://certbot.eff.org/instructions?ws=nginx&os=snap&tab=standard)
 
 使用的是nginx和centos7的版本
 
@@ -115,6 +115,21 @@ http {
     }
 }
 ```
+
+### 测试certbot自动更新
+```sh
+    sudo certbot renew --dry-run
+```
+如果执行后显示以下文字就说明测试成功了
+```sh
+Congratulations, all renewals succeeded. The following certs have been renewed:  
+   /etc/letsencrypt/live/www.XXXX.com/fullchain.pem (success)
+```
+
+### 提醒
+
+测试自动更新时他是需要80端口空出来的，如果当前nginx还占着80端口记得先把nginx关闭，测试完再重新启动nginx。
+
 
 ## 5.重新部署
 
