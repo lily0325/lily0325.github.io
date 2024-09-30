@@ -35,7 +35,7 @@ export default defineConfig({
         items: [
           { text: '静态资源请求处理器', link: '/function/ResourceHttpRequestHandler' },
           { text: '服务器部署前后端+SSL证书', link: '/function/deploy+ssl' },
-          // { text: '功能使用', link: '/function' },
+          { text: 'Actions工作流(自动部署)', link: '/function/workflow' },
         ],
       },
       {
