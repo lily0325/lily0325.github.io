@@ -1,10 +1,28 @@
 # Github Actions workflow--工作流 (自动部署)
 
+[官方文档](https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions)
+
+[GitHub Actions 入门教程(阮一峰)](https://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html)
+
+`持续集成`由很多操作组成，比如抓取代码、运行测试、登录远程服务器，发布到第三方服务等等。
+
 `Actions` 是 `GitHub` 上的一个功能，它允许开发者自动化软件开发和部署的过程。通过 Actions，你可以创建自定义的工作流程，这些工作流程可以在代码推送到仓库时`自动触发`，执行一系列的任务，如测试、构建、部署等。
 
 ## 工作流文件
 
 工作流是通过一个名为 `workflow` 的 YAML 文件来定义的。这个文件通常存放在仓库<u>.github/workflows</u> 目录下。
+
+## 基本概念
+
+GitHub Actions 有一些自己的术语。
+
+1. workflow （工作流程）：持续集成一次运行的过程，就是一个 workflow。
+
+2. job （任务）：一个 workflow 由一个或多个 jobs 构成，含义是一次持续集成的运行，可以完成多个任务。
+
+3. step（步骤）：每个 job 由多个 step 构成，一步步完成。
+
+4. action （动作）：每个 step 可以依次执行一个或多个命令（action）。
 
 ## 构建 VitePress 站点并将其部署到 GitHub Pages 的示例工作流程
 ```yaml
