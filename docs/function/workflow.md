@@ -30,6 +30,15 @@ name: Deploy VitePress site to Pages
 # VitePress部署到github pages
 
 on:
+  #事件触发机制
+  #你可以设定以下事件之一或多个事件触发工作流程：
+
+  # push: 当有提交被推送到仓库时。
+  # pull_request: 当有 Pull Request 被创建或更新时。
+  # schedule: 根据定时计划执行。
+  # release: 当创建了一个新的 Release 时。
+  # workflow_dispatch: 允许手动触发工作流程。
+
   # 在针对 `main` 分支的推送上运行。如果你
   # 使用 `master` 分支作为默认分支，请将其更改为 `master`
   push:
@@ -102,7 +111,7 @@ jobs:
 
 如果想要将项目自动部署到自己的服务器，那关键点就在最后一个action，也就是Upload artifact，前面基本上可以不需要变动。（后面的#部署工作删除）
 
-```yml
+```yaml
 name: Deploy VitePress site to Pages
 # VitePress部署到github pages
 
@@ -189,3 +198,8 @@ jobs:
 设置好之后就可以更新上传`deploy.yml`文件让它自动进行部署。
 
 Github Actions 就会自动将项目打包并上传到对应服务器上面。
+
+
+### 掘金类似文章
+
+[【前端工程化】自动化篇-Github Action基本使用、自动部署组件库文档、github3D指标统计](https://juejin.cn/post/7356815857078157331?searchId=20240930161155DD73504AC8BB882C0C76)
