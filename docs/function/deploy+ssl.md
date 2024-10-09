@@ -9,6 +9,8 @@
 ## 2.前后端打包
 
 ### `前端`：
+
+
 使用命令npm run build进行打包
 
 打包出来的dist文件夹就是压缩好的前端代码
@@ -48,6 +50,8 @@
 ## 4.部署SSL证书
 
 采用免费的SSL证书工具CertBot，证书到期后还能自动免费续期。
+
+![certbot](https://s2.loli.net/2024/10/09/Meh6jUxgCw8qy2T.png)
 
 [官网地址](https://certbot.eff.org/instructions?ws=nginx&os=snap&tab=standard)
 
