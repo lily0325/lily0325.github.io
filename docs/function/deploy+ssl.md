@@ -134,6 +134,8 @@ Congratulations, all renewals succeeded. The following certs have been renewed:
 
 测试自动更新时他是需要80端口空出来的，如果当前nginx还占着80端口记得先把nginx关闭，测试完再重新启动nginx。
 
+或者在nginx配置上开放自动更新的
+
 
 ## 5.重新部署
 
@@ -168,4 +170,3 @@ Congratulations, all renewals succeeded. The following certs have been renewed:
 重新启动后端
 
 不过后端一般还包括mysql，mysql可以使用sql文件进行导入数据和表
-

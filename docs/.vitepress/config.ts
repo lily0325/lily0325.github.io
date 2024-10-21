@@ -52,6 +52,7 @@ export default defineConfig({
         items: [
           { text: 'WebSocket', link: '/knowledge/ws' },
           { text: 'SSE', link: '/knowledge/sse' },
+          { text: '定时任务', link: '/knowledge/cron' },
         ],
       },
     ],
