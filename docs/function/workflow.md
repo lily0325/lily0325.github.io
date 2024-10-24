@@ -203,3 +203,51 @@ Github Actions 就会自动将项目打包并上传到对应服务器上面。
 ### 掘金类似文章
 
 [【前端工程化】自动化篇-Github Action基本使用、自动部署组件库文档、github3D指标统计](https://juejin.cn/post/7356815857078157331?searchId=20240930161155DD73504AC8BB882C0C76)
+
+
+## 在github上部署nodejs爬虫
+
+首先得在仓库里放好nodejs爬虫的代码，然后在github上创建一个`.github/workflows` 目录并在其中添加一个 YAML 文件来配置 GitHub Actions。
+
+```yaml
+name: Fetch Web Data and Save to Repository
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # 每天凌晨执行一次
+  workflow_dispatch:
+
+jobs:
+  fetch-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      # 安装依赖项
+      - name: Install dependencies
+        run: npm ci
+      # 运行爬虫脚本
+      - name: Fetch Web data
+        run: |
+          node your-script.js
+      # 将生成的 JSON 文件上传为动作的工件
+      - name: Commit and push changes
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@users.noreply.github.com"
+          git add .
+          git commit -m "Update data.json" || true
+          git push origin HEAD
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+```
+
+使用 `npm ci` 和 `npm run your-script.js` 来安装依赖并运行你的爬虫脚本。最后，使用 `actions/upload-artifact` 将生成的 JSON 文件上传为动作的工件。
+
