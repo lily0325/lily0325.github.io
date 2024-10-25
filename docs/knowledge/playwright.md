@@ -166,6 +166,16 @@ npx playwright test
    ```
    在测试脚本中添加以上代码即可。path是截图的保存路径，fullPage是是否全屏截图。
 
+   ```javascript
+   await page.screenshot({ path:'screenshot.png', clip:{ x:0, y:0, width:100, height:100 } });
+   ```
+   clip是截取元素的位置和大小。
+
+   ```javascript
+   await page.locator('.header').screenshot({ path: 'screenshot.png' });
+   ```
+   截取单个元素的截图
+
 2. 录制视频
 
    ```javascript
