@@ -2,6 +2,8 @@
 
 ## 简单介绍
 
+[官方文档](https://playwright.nodejs.cn/docs/intro)
+
 Playwright 是微软制作的一个` Node.js `库，用于自动化浏览器操作，支持多种浏览器，如` Chrome、Firefox 和 WebKit`。它提供了一个简单的 API，使得编写测试脚本变得容易。
 
 而且它还提供了一些有用的功能，如`录制和回放浏览器操作`，以及在不同浏览器之间共享会话。
