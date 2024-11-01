@@ -4,6 +4,8 @@
 
 此 GitHub Action 在 3D 个人资料图像上创建 GitHub 贡献日历。
 
+`只能统计公共仓库的数据，私有仓库的数据无法统计。`
+
 此操作将生成您的 github 个人资料 3d 贡献日历并提交到您的 repo。添加此操作后，您也可以自行触发操作。
 
 ## 部署使用步骤
@@ -51,3 +53,13 @@
 3. 触发工作流。
 
     通过以上步骤，您可以成功部署并使用 GitHub 个人资料 3D Contrib。
+
+
+
+## 注意
+
+工作流如果未能执行成功，可以设置仓库对令牌的权限。
+
+在`settings->Actions->General->Workflow permissions`
+
+设定为`Read and write permissions`。
