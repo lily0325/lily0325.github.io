@@ -107,7 +107,7 @@ jobs:
 每次更新上传代码到github的时候，都会自动重新将项目进行部署到github pages里。
 
 
-# 部署到个人服务器
+## 部署到个人服务器
 
 如果想要将项目自动部署到自己的服务器，那关键点就在最后一个action，也就是Upload artifact，前面基本上可以不需要变动。（后面的#部署工作删除）
 
@@ -198,6 +198,39 @@ jobs:
 设置好之后就可以更新上传`deploy.yml`文件让它自动进行部署。
 
 Github Actions 就会自动将项目打包并上传到对应服务器上面。
+
+
+## 简单的使用方法
+
+上述内容可能麻烦了些，如果你是使用ssh账号与密码的话，那也可以使用`actions/ssh-deploy`来进行部署，具体的配置方式可以参考下面的配置。
+
+以下配置是将打包好的文件上传到云服务器对应的文件夹内。
+
+```yaml
+      # Deploy
+      - name: 删除云服务器对应文件夹内的文件
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          port: ${{ secrets.SERVER_PORT }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          password: ${{ secrets.SERVER_PASSWORD }}
+          script: rm -rf /home/frontEnd/test/*
+
+      - name: 将构建输出上传到云服务器对应文件夹内
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          port: ${{ secrets.SERVER_PORT }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          password: ${{ secrets.SERVER_PASSWORD }}
+          source: "dist/*" # 假设你的构建输出在dist目录下
+          target: "/home/frontEnd/test"
+```
+
+也是要在github仓库的Settings里的Secrets下设置需要保密的值。
+
+
 
 
 ### 掘金类似文章
