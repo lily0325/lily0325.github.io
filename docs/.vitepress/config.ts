@@ -37,6 +37,7 @@ export default defineConfig({
           { text: '服务器部署前后端+SSL证书', link: '/function/deploy+ssl' },
           { text: 'Actions工作流(自动部署)', link: '/function/workflow' },
           { text: '跨域处理', link: '/function/cors' },
+          { text: 'github3D指标统计', link: '/function/github3D' },
         ],
       },
       {
