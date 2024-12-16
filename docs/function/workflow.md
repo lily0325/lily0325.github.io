@@ -257,11 +257,15 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+        with:
+          ref: main
+          # 自定义的个人推送TOKEN
+          token: ${{ secrets.PUSH_TOKEN }}  
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '16'
+          node-version: '18'
 
       # 安装依赖项
       - name: Install dependencies
@@ -276,10 +280,8 @@ jobs:
           git config user.name "GitHub Actions"
           git config user.email "actions@users.noreply.github.com"
           git add .
-          git commit -m "Update data.json" || true
-          git push origin HEAD
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          git commit -m "Update data.json"  || echo "No changes to commit"
+          git push origin main
 ```
 
 使用 `npm ci` 和 `npm run your-script.js` 来安装依赖并运行你的爬虫脚本。最后，使用 `actions/upload-artifact` 将生成的 JSON 文件上传为动作的工件。
