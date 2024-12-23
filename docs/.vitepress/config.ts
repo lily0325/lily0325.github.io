@@ -51,6 +51,7 @@ export default defineConfig({
         text: '知识',
         collapsed: false,
         items: [
+          { text: '小知识点', link: '/knowledge/smallpoint' },
           { text: 'WebSocket', link: '/knowledge/ws' },
           { text: 'SSE', link: '/knowledge/sse' },
           { text: '定时任务', link: '/knowledge/cron' },
