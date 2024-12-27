@@ -6,6 +6,8 @@
 ```shell
 npm install recorder-core
 ```
+recorder库地址：
+https://gitee.com/xiangyuecn/Recorder
 
 ### 引入依赖库
 ```js
