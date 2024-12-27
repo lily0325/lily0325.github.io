@@ -38,6 +38,7 @@ export default defineConfig({
           { text: 'Actions工作流(自动部署)', link: '/function/workflow' },
           { text: '跨域处理', link: '/function/cors' },
           { text: 'github3D指标统计', link: '/function/github3D' },
+          { text: '前端录音', link: '/function/recorder' },
         ],
       },
       {
