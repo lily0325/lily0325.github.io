@@ -47,6 +47,7 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: '2024踩坑日志', link: '/mistake/2024' },
+          { text: '2025踩坑日志', link: '/mistake/2025' },
         ],
       },
       {
