@@ -39,7 +39,7 @@ export default defineConfig({
           { text: '跨域处理', link: '/function/cors' },
           { text: 'github3D指标统计', link: '/function/github3D' },
           { text: '前端录音', link: '/function/recorder' },
-          { text: '前端视频流', link: '/function/video' },
+          { text: '前端视频流播放实现', link: '/function/video' },
         ],
       },
       {
@@ -59,6 +59,7 @@ export default defineConfig({
           { text: 'SSE', link: '/knowledge/sse' },
           { text: '定时任务', link: '/knowledge/cron' },
           { text: 'playwright简单使用', link: '/knowledge/playwright' },
+          { text: '前端视频流基础', link: '/knowledge/video' },
         ],
       },
     ],
