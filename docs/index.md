@@ -7,8 +7,11 @@ hero:
   tagline: 
   actions:
     - theme: brand
-      text: 查看
+      text: 查看文档
       link: /introduction
+    - theme: brand
+      text: 查看项目
+      link: /project/project
     - theme: alt
       text: GitHub
       link: https://github.com/lily0325/lily0325.github.io

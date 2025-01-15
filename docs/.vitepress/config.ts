@@ -87,7 +87,7 @@ function sidebarProject(): DefaultTheme.SidebarItem[] {
       text: '项目列表',
       collapsed: false,
       items: [
-        { text: '项目列表', base: '/project/', link: 'list' },
+        { text: '内部人员管理系统', base: '/project/', link: 'personManagement' },
       ],
     },
   ]

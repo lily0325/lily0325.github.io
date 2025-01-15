@@ -242,9 +242,9 @@ router.post('/play', async (req, res, next) => {
 
 ```
 
-上述代码中的VideoStream类是一个封装好的类，其中的startTransCodo方法就是新建一个Mpeg1Muxer类的实例
+上述代码中的`VideoStream`类是一个封装好的类，其中的`startTransCodo`方法就是新建一个`Mpeg1Muxer`类的实例
 
-这个Mpeg1Muxer类能够开启一个子进程，调用FFMPEG将RTSP视频流转换成mpeg-ts格式流，然后通过websocket发送出去，前端通过websocket接收到视频每一帧的二进制流，然后使用JSMPEG库在canvas中展示画面。
+这个`Mpeg1Muxer`类能够开启一个子进程，调用FFMPEG将RTSP视频流转换成mpeg-ts格式流，然后通过websocket发送出去，前端通过websocket接收到视频每一帧的二进制流，然后使用JSMPEG库在canvas中展示画面。
 
 ```JS
 // 生成唯一ID
