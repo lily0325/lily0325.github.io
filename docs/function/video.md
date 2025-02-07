@@ -1,3 +1,7 @@
+---
+outline: deep
+---
+
 # 前端视频流
 
 ## HLS前端浏览器播放
@@ -167,6 +171,107 @@ github地址:https://github.com/numberwolf/h265web.js
     const reloadHandler = () => playAction("reload");
     ```
     把URL替换成你自己的HLS直播链接即可，记得要做代理，不然的话会有跨域问题。
+
+
+
+### 使用easyPlayer.js库播放HLS视频流
+
+`h265web.js`这个库是不算是特别好用，毕竟他不是一个播放器，只是将画面通过canvas画在页面上。
+
+而`easyPlayer.js`这个库是一个播放器，能够播放HLS视频流。
+
+github地址：https://github.com/EasyDarwin/EasyPlayer.js
+
+里面有原生html的demo，也有react版本和vue2版本的demo(下面是对vue2版本的vue3改良版本)。
+
+使用方法：(Vue3+Vite项目)
+
+1. 在GitHub里下载对应的`EasyPlayer-pro.js`、`EasyPlayer-pro.wasm`和`EasyPlayer-lib.js`文件。（在vue-demo文件夹下的js文件夹中）
+
+2. 将这两个文件放置于public文件夹下，并在`index.html`中引入。
+
+    ```html
+    <body>
+    <div id="app"></div>
+    <script src="/EasyPlayer-pro.js"></script>
+    <script type="module" src="/src/main.ts"></script>
+    </body>
+    ```
+3. 创建EasyPlayer组件
+
+    HTML部分
+    ```HTML
+    <template>
+      <div class="context">
+        <div :class="['player_container', 'player_container_1']">
+          <div class="player_item">
+            <div class="player_box" id="player_box1"></div>
+          </div>
+        </div>
+      </div>
+    </template>
+    ```
+    JS部分
+    ```JS
+
+    const videoUrl = ref("");
+    const playerInfo = ref(null);
+
+    const playCreate = () => {
+      const container = document.getElementById("player_box1");
+      const easyplayer = new EasyPlayerPro(container, {
+        isLive: true,
+        bufferTime: 0.2, // 缓存时长
+        stretch: false, // 拉伸模式
+        WASM: true,
+        autoplay: true,
+      });
+      easyplayer.on("fullscreen", function (flag) {
+        console.log("is fullscreen", flag);
+      });
+
+      easyplayer.on("error", function (e) {
+        console.log("error", e);
+      });
+      playerInfo.value = easyplayer;
+    };
+    //播放
+    const onPlayer = () => {
+      setTimeout(
+        (url) => {
+          playerInfo.value &&
+            playerInfo.value
+              .play(url)
+              .then(() => {})
+              .catch((e) => {
+                console.error(e);
+              });
+        },
+        0,
+        videoUrl.value
+      );
+    };
+    //销毁
+    const onDestroy = () => {
+      return new Promise((resolve, reject) => {
+        if (playerInfo.value) {
+          playerInfo.value.destroy();
+          playerInfo.value = null;
+        }
+        setTimeout(() => {
+          resolve();
+        }, 100);
+      });
+    };
+
+    onMounted(() => {
+      playCreate();
+    });
+
+    ```
+
+
+
 
 
 ## RTSP前端浏览器播放
