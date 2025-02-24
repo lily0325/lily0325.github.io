@@ -88,6 +88,7 @@ function sidebarProject(): DefaultTheme.SidebarItem[] {
       collapsed: false,
       items: [
         { text: '内部人员管理系统', base: '/project/', link: 'personManagement' },
+        { text: '视联网项目系统', base: '/project/', link: 'vnet' },
       ],
     },
   ]
