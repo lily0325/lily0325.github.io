@@ -20,6 +20,7 @@ export default defineConfig({
       { text: '主页', link: '/' },
       { text: '文档', link: '/introduction' },
       { text: '项目', link: '/project/project' },
+      { text: '八股文', link: '/baguwen' },
       { text: '作品', link: '/work' },
       { text: '制作者', link: '/team' },
     ],
