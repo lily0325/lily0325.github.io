@@ -8,5 +8,8 @@
   },
   "devDependencies": {
     "vitepress": "latest"
+  },
+  "dependencies": {
+    "canvas-confetti": "^1.9.3"
   }
 }

@@ -25,3 +25,14 @@ features:
     title: 持续学习与自我提升
     details: 一个结构化的资料库鼓励持续的学习和积累。每次学习新技能或遇到难题时，可以将其记录下来，形成自己的知识体系。随着时间的推移，这个资料库将成为个人成长和技能提升的重要见证，同时也便于回顾和复习，确保知识的长期记忆和应用。
 ---
+
+<script>
+import confetti from "canvas-confetti";
+
+/* 纸屑 */
+confetti({
+  particleCount: 100,
+  spread: 170,
+  origin: { y: 0.6 },
+});
+</script>
