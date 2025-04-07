@@ -63,6 +63,8 @@ URL_ADDRESS是你要测试的网页地址，如果没有地址则会自动打开
 
 想要运行测试脚本，只需要执行以下命令即可：
 
+`普通模式`
+
 ```bash
 npx playwright test
 ```
@@ -71,6 +73,12 @@ npx playwright test
 
 运行测试脚本之后，默认会使用三个浏览器进行测试，分别是`Chrome、Firefox 和 WebKit`，并输出测试结果，并生成测试报告，测试报告会保存在`/tests/`文件夹下的`playwright-report`文件夹中，同时也会有本地的浏览器预览，你可以在浏览器中查看测试结果。
 
+`UI界面模式`
+```bash
+npx playwright test --ui
+```
+
+直观地查看每个步骤之前、期间和之后发生的情况。UI 模式还具有许多其他功能，例如定位器选择器、监视模式等。
 
 注意：
 
