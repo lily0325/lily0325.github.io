@@ -218,3 +218,22 @@ npx playwright test --ui
    ```
 
 
+## VSCODE插件
+
+Playwright 有一个 VS Code 扩展，在使用 Node.js 进行测试时可用。
+
+![1.png](https://github.com/microsoft/playwright/assets/13063165/cab54568-3168-4b3f-bf3d-854976594903)
+
+`ctrl+P`打开vscode命令面板输入`Install Playwright`
+
+![2.png](https://github.com/microsoft/playwright/assets/13063165/14e91050-24ab-4ff1-a37b-57d7c15e5c35)
+
+![3.png](https://github.com/microsoft/playwright/assets/13063165/c9e8a25a-e9e8-4419-aeb5-1b8ba58bd71d)
+
+安装好后，侧边栏就有playwright的测试功能了。
+
+![4.png](https://github.com/microsoft/playwright/assets/13063165/d203fe83-6015-4e7a-b816-35d373906b24)
+
+能够直接在vscode中就使用playwright的测试能力。
+
+![5.png](https://github.com/microsoft/playwright/assets/13063165/3b8af12a-4805-4573-9d38-92055a0a7e75)
