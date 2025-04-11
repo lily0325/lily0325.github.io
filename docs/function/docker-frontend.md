@@ -93,3 +93,36 @@ docker run -d -p 80:80 frontend-image:latest
 
 这里使用-d参数使容器在后台运行，-p参数将宿主机的 80 端口映射到容器的 80 端口。frontend-image:latest是前端 Docker 镜像。
 
+
+## 宿主机文件挂载容器
+
+当宿主机的HTML文件夹内容发生变化时，容器内对应的文件夹也想要随之改变，可以通过Docker卷(`Volume`)来实现挂载。
+
+### 本地终端
+
+在启动 Nginx 容器时，使用 -v 或 --volume 参数来挂载宿主机的 HTML 文件夹到容器内的 HTML 文件夹。
+
+假设宿主机上的 HTML 文件夹路径是 /home/user/my-html，那么启动容器的命令如下：
+
+```bash
+docker run -d -p 80:80 -v /home/user/my-html:/usr/share/nginx/html nginx:latest
+```
+
+-v /home/user/my-html:/usr/share/nginx/html：这是挂载卷的关键参数。
+
+/home/user/my-html 需要替换为宿主机上实际的 HTML 文件夹路径，它会将该路径挂载到容器内的 /usr/share/nginx/html 目录。(有些情况可以挂载到/etc/nginx/html上)
+
+
+### Desktop
+
+镜像运行新容器时可以挂载卷柜
+
+![image.png](https://s2.loli.net/2025/04/11/aBk63EgjW7RbcJC.png)
+
+在卷柜直接填写`Host path`和`Container path`。
+
+
+挂载好后，当本地的HTML文件夹里的内容变化，容器里的对应挂载文件夹里的内容也会`同步变化`。
+
+
+
