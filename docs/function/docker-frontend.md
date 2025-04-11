@@ -6,7 +6,7 @@
 
 <big>windows系统</big>：
 
-访问 Docker 官方网站（https://www.docker.com/products/docker-desktop）下载 Docker Desktop 安装程序。
+访问 Docker 官方网站(https://www.docker.com/products/docker-desktop)下载 Docker Desktop 安装程序。
 
 默认是装在C盘当中，如果C盘内存不够想要装D盘，就需要命令行启动安装程序exe
 
