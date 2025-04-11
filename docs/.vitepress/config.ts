@@ -51,6 +51,8 @@ function sidebarDocx(): DefaultTheme.SidebarItem[] {
         { text: 'github3D指标统计', base: '/function/', link: 'github3D' },
         { text: '前端录音', base: '/function/', link: 'recorder' },
         { text: '前端视频流播放实现', base: '/function/', link: 'video' },
+        { text: 'docker前端部署', base: '/function/', link: 'docker-frontend' },
+        { text: 'docker后端部署', base: '/function/', link: 'docker-backend' },
       ],
     },
     {
